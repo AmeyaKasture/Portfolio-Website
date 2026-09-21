@@ -1028,12 +1028,20 @@ button {
     width: 64px;
     height: 64px;
     border-radius: var(--radius-full);
-    background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark));
+    background-color: var(--color-bg);
+    border: 2px solid var(--color-accent);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    color: var(--color-accent);
     margin: 0 auto 1.25rem;
+    transition: background-color var(--transition), color var(--transition), transform var(--transition);
+}
+
+.beyond-card:hover .beyond-card__icon {
+    background-color: var(--color-accent);
+    color: #fff;
+    transform: scale(1.05) rotate(4deg);
 }
 
 .beyond-card__title {

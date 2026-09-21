@@ -33,7 +33,7 @@ console.log('Running portfolio tests...\n');
 
 test('index.html exists and contains key content', () => {
     const html = readFile('index.html');
-    assert(html.includes('<title>'), 'title tag missing');
+    assert(html.includes('<title>Ameya Kasture</title>'), 'title should be "Ameya Kasture"');
     assert(html.includes('Ameya Kasture'), 'name missing');
     assert(html.includes('Systems Engineer') || html.includes('Software Developer'), 'role missing');
 });

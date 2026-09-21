@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="960" viewBox="0 0 720 960">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a2236"/>
+      <stop offset="100%" stop-color="#0b0f19"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="960" fill="url(#bg)"/>
+  <circle cx="360" cy="360" r="140" fill="#232d45"/>
+  <path d="M220 760c0-154 112-280 140-280s140 126 140 280" fill="#232d45"/>
+  <text x="360" y="820" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="28" fill="#64748b">Replace with your photo</text>
+  <text x="360" y="860" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="18" fill="#475569">images/profile.jpg</text>
+</svg>

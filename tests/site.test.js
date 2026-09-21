@@ -106,6 +106,17 @@ test('scroll reveal animations are configured', () => {
     assert(js.includes('IntersectionObserver'), 'IntersectionObserver usage missing');
 });
 
+test('theme toggle is implemented', () => {
+    const html = readFile('index.html');
+    const css = readFile('css/styles.css');
+    const js = readFile('js/main.js');
+    assert(html.includes('id="themeToggle"'), 'theme toggle button missing');
+    assert(css.includes('[data-theme="dark"]'), 'dark theme CSS missing');
+    assert(js.includes('initTheme'), 'theme initialiser missing');
+    assert(js.includes('localStorage.getItem'), 'localStorage read missing');
+    assert(js.includes('localStorage.setItem'), 'localStorage save missing');
+});
+
 test('all required sections exist', () => {
     const html = readFile('index.html');
     const requiredSections = ['home', 'about', 'experience', 'skills', 'blog'];

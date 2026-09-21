@@ -215,6 +215,42 @@
     }
 
     /**
+     * Theme toggle logic.
+     */
+    const themeToggle = document.getElementById('themeToggle');
+    const THEME_KEY = 'portfolio-theme';
+
+    function applyTheme(theme) {
+        if (theme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+            document.documentElement.removeAttribute('data-theme');
+        }
+        if (themeToggle) {
+            themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+        }
+    }
+
+    function getPreferredTheme() {
+        const saved = localStorage.getItem(THEME_KEY);
+        if (saved) return saved;
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+
+    function toggleTheme() {
+        const current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+        const next = current === 'dark' ? 'light' : 'dark';
+        localStorage.setItem(THEME_KEY, next);
+        applyTheme(next);
+    }
+
+    function initTheme() {
+        if (!themeToggle) return;
+        applyTheme(getPreferredTheme());
+        themeToggle.addEventListener('click', toggleTheme);
+    }
+
+    /**
      * Initialise scroll-triggered reveal animations.
      */
     function initRevealAnimations() {
@@ -268,6 +304,7 @@
         initSkillsSlider();
         renderBlogPosts();
         initRevealAnimations();
+        initTheme();
     }
 
     if (document.readyState === 'loading') {

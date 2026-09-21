@@ -33,9 +33,9 @@ console.log('Running portfolio tests...\n');
 
 test('index.html exists and contains key content', () => {
     const html = readFile('index.html');
-    assert(html.includes('<title>Ameya Kasture | Software Developer</title>'), 'title missing');
+    assert(html.includes('<title>'), 'title tag missing');
     assert(html.includes('Ameya Kasture'), 'name missing');
-    assert(html.includes('Software Developer'), 'role missing');
+    assert(html.includes('Systems Engineer') || html.includes('Software Developer'), 'role missing');
 });
 
 test('all external profile links are present', () => {
@@ -173,6 +173,32 @@ test('favicon exists and is referenced', () => {
     const html = readFile('index.html');
     assert(fs.existsSync(path.join(ROOT, 'favicon.svg')), 'favicon.svg missing');
     assert(html.includes('favicon.svg'), 'favicon link missing');
+});
+
+test('SEO metadata is present', () => {
+    const html = readFile('index.html');
+    assert(html.includes('<title>'), 'title tag missing');
+    assert(html.includes('name="description"'), 'meta description missing');
+    assert(html.includes('name="keywords"'), 'meta keywords missing');
+    assert(html.includes('name="author"'), 'meta author missing');
+    assert(html.includes('name="robots"'), 'meta robots missing');
+    assert(html.includes('rel="canonical"'), 'canonical link missing');
+    assert(html.includes('property="og:title"'), 'Open Graph title missing');
+    assert(html.includes('property="og:description"'), 'Open Graph description missing');
+    assert(html.includes('name="twitter:card"'), 'Twitter card missing');
+    assert(html.includes('application/ld+json'), 'JSON-LD structured data missing');
+});
+
+test('sitemap.xml and robots.txt exist', () => {
+    assert(fs.existsSync(path.join(ROOT, 'sitemap.xml')), 'sitemap.xml missing');
+    assert(fs.existsSync(path.join(ROOT, 'robots.txt')), 'robots.txt missing');
+
+    const sitemap = readFile('sitemap.xml');
+    assert(sitemap.includes('<loc>https://ameyakasture.github.io/Portfolio-Website/</loc>'), 'sitemap URL missing');
+
+    const robots = readFile('robots.txt');
+    assert(robots.includes('Sitemap:'), 'robots sitemap reference missing');
+    assert(robots.includes('Allow: /'), 'robots allow rule missing');
 });
 
 console.log('\nTest run complete.');

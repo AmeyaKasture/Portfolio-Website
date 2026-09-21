@@ -838,14 +838,22 @@ button {
     width: 48px;
     height: 48px;
     border-radius: var(--radius-md);
-    background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark));
+    background-color: var(--color-bg);
+    border: 2px solid var(--color-accent);
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 700;
     font-size: 0.875rem;
-    color: #fff;
+    color: var(--color-accent);
     margin-bottom: 1.25rem;
+    transition: background-color var(--transition), color var(--transition), transform var(--transition);
+}
+
+.skill-card:hover .skill-card__icon {
+    background-color: var(--color-accent);
+    color: #fff;
+    transform: scale(1.05) rotate(4deg);
 }
 
 .skill-card__title {

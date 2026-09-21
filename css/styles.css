@@ -997,6 +997,58 @@ button {
     transform: translate(3px, -3px);
 }
 
+/* Beyond the Code */
+.beyond {
+    background-color: var(--color-bg);
+    border-top: 1px solid var(--color-border);
+}
+
+.beyond__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.beyond-card {
+    padding: 2rem;
+    background-color: var(--color-bg-elevated);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    text-align: center;
+    transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+}
+
+.beyond-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(var(--color-accent-rgb), 0.25);
+    box-shadow: var(--shadow-md);
+}
+
+.beyond-card__icon {
+    width: 64px;
+    height: 64px;
+    border-radius: var(--radius-full);
+    background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    margin: 0 auto 1.25rem;
+}
+
+.beyond-card__title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--color-text);
+}
+
+.beyond-card__text {
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+}
+
 /* Footer */
 .footer {
     padding: 2rem 0;
@@ -1082,6 +1134,10 @@ button {
     .blog__grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .beyond__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 768px) {
@@ -1155,6 +1211,10 @@ button {
     .blog__grid {
         grid-template-columns: 1fr;
     }
+
+    .beyond__grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Dark theme (Catppuccin mocha inspired) */
@@ -1169,10 +1229,10 @@ button {
     --color-text-rgb: 205, 214, 244;
     --color-text-muted: #a6adc8;
     --color-text-subtle: #6c7086;
-    --color-accent: #cba6f7;
-    --color-accent-rgb: 203, 166, 247;
-    --color-accent-hover: #d5b5f9;
-    --color-accent-dark: #a47de4;
+    --color-accent: #2a9d8f;
+    --color-accent-rgb: 42, 157, 143;
+    --color-accent-hover: #3dbbae;
+    --color-accent-dark: #1f7a70;
     --color-current: #94e2d5;
     --color-current-rgb: 148, 226, 213;
 }

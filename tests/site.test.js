@@ -115,6 +115,19 @@ test('theme toggle is implemented', () => {
     assert(js.includes('initTheme'), 'theme initialiser missing');
     assert(js.includes('localStorage.getItem'), 'localStorage read missing');
     assert(js.includes('localStorage.setItem'), 'localStorage save missing');
+    assert(js.includes("return 'light'"), 'light theme should be default');
+});
+
+test('beyond the code section exists', () => {
+    const html = readFile('index.html');
+    assert(html.includes('id="beyond"'), 'beyond section missing');
+    assert(html.includes('Beyond the Code'), 'section label missing');
+    assert(html.includes('badminton'), 'badminton mention missing');
+    assert(html.includes('cricket'), 'cricket mention missing');
+    assert(html.includes('squash'), 'squash mention missing');
+    assert(html.includes('novels'), 'novels mention missing');
+    assert(html.toLowerCase().includes('photography'), 'photography mention missing');
+    assert(html.toLowerCase().includes('poems'), 'poems mention missing');
 });
 
 test('all required sections exist', () => {

@@ -169,4 +169,10 @@ test('profile image placeholder exists', () => {
     assert(fs.existsSync(path.join(ROOT, 'images', 'profile.svg')), 'profile placeholder missing');
 });
 
+test('favicon exists and is referenced', () => {
+    const html = readFile('index.html');
+    assert(fs.existsSync(path.join(ROOT, 'favicon.svg')), 'favicon.svg missing');
+    assert(html.includes('favicon.svg'), 'favicon link missing');
+});
+
 console.log('\nTest run complete.');

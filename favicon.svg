@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="30" fill="#0b0f19" stroke="#2563eb" stroke-width="2"/>
+
+  <!-- Cat ears -->
+  <path d="M14 28L18 14L26 24Z" fill="#0b0f19" stroke="#2563eb" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M50 28L46 14L38 24Z" fill="#0b0f19" stroke="#2563eb" stroke-width="2" stroke-linejoin="round"/>
+
+  <!-- Inner ear accents -->
+  <path d="M17 26L19.5 16L25 24Z" fill="#2563eb" opacity="0.3"/>
+  <path d="M47 26L44.5 16L39 24Z" fill="#2563eb" opacity="0.3"/>
+
+  <!-- Face outline -->
+  <ellipse cx="32" cy="36" rx="20" ry="18" fill="#111827" stroke="#2563eb" stroke-width="2"/>
+
+  <!-- Circuit patterns on forehead -->
+  <line x1="22" y1="26" x2="26" y2="26" stroke="#2563eb" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="26" y1="26" x2="26" y2="30" stroke="#2563eb" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="26" cy="30" r="1.5" fill="#2563eb"/>
+
+  <line x1="42" y1="26" x2="38" y2="26" stroke="#2563eb" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="38" y1="26" x2="38" y2="30" stroke="#2563eb" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="38" cy="30" r="1.5" fill="#2563eb"/>
+
+  <!-- Eyes - robotic -->
+  <ellipse cx="24" cy="36" rx="6" ry="5" fill="#0b0f19" stroke="#22c55e" stroke-width="1.5"/>
+  <ellipse cx="40" cy="36" rx="6" ry="5" fill="#0b0f19" stroke="#22c55e" stroke-width="1.5"/>
+
+  <!-- Pupils - vertical slit (cat-like) -->
+  <ellipse cx="24" cy="36" rx="2" ry="3.5" fill="#22c55e"/>
+  <ellipse cx="40" cy="36" rx="2" ry="3.5" fill="#22c55e"/>
+
+  <!-- Eye glow dots -->
+  <circle cx="24" cy="36" r="1" fill="#4ade80"/>
+  <circle cx="40" cy="36" r="1" fill="#4ade80"/>
+
+  <!-- Nose - triangle -->
+  <path d="M32 42L29 46H35Z" fill="#2563eb"/>
+
+  <!-- Mouth - circuit style -->
+  <path d="M26 48H32" stroke="#2563eb" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M32 48V50" stroke="#2563eb" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M32 50H38" stroke="#2563eb" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Whiskers - tech style with dots -->
+  <line x1="10" y1="38" x2="18" y2="40" stroke="#2563eb" stroke-width="1" stroke-linecap="round" opacity="0.7"/>
+  <line x1="10" y1="42" x2="18" y2="42" stroke="#2563eb" stroke-width="1" stroke-linecap="round" opacity="0.7"/>
+  <line x1="10" y1="46" x2="18" y2="44" stroke="#2563eb" stroke-width="1" stroke-linecap="round" opacity="0.7"/>
+
+  <line x1="54" y1="38" x2="46" y2="40" stroke="#2563eb" stroke-width="1" stroke-linecap="round" opacity="0.7"/>
+  <line x1="54" y1="42" x2="46" y2="42" stroke="#2563eb" stroke-width="1" stroke-linecap="round" opacity="0.7"/>
+  <line x1="54" y1="46" x2="46" y2="44" stroke="#2563eb" stroke-width="1" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- Circuit nodes at whisker tips -->
+  <circle cx="10" cy="38" r="1" fill="#2563eb" opacity="0.5"/>
+  <circle cx="10" cy="42" r="1" fill="#2563eb" opacity="0.5"/>
+  <circle cx="10" cy="46" r="1" fill="#2563eb" opacity="0.5"/>
+  <circle cx="54" cy="38" r="1" fill="#2563eb" opacity="0.5"/>
+  <circle cx="54" cy="42" r="1" fill="#2563eb" opacity="0.5"/>
+  <circle cx="54" cy="46" r="1" fill="#2563eb" opacity="0.5"/>
+</svg>
